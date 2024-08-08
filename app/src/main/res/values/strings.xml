@@ -3,4 +3,5 @@
     <string name="title_favorites">Favoritas</string>
     <string name="title_addNote">Añadir</string>
     <string name="title_notes">Mis Notas</string>
+    <string name="delete_note">Eliminar nota</string>
 </resources>

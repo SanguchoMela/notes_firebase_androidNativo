@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_notes"
-        android:name="com.example.mynotes.ui.notifications.NotesFragment"
+        android:name="com.example.mynotes.ui.notes.NotesFragment"
         android:label="Mis Notas"
         tools:layout="@layout/fragment_notes" />
 </navigation>

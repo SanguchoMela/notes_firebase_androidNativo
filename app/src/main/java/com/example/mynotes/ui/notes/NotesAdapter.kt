@@ -1,16 +1,17 @@
-package com.example.mynotes.ui.notifications
+package com.example.mynotes.ui.notes
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mynotes.R
-import com.example.mynotes.ui.notes.Note
 
-class NotesAdapter : ListAdapter<Note, NotesAdapter.NoteViewHolder>(NoteDiffCallback()) {
+class NotesAdapter (private val onDeleteClick: (Note) -> Unit) : ListAdapter<Note, NotesAdapter.NoteViewHolder>(NoteDiffCallback()) {
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_note, parent, false)
@@ -18,16 +19,21 @@ class NotesAdapter : ListAdapter<Note, NotesAdapter.NoteViewHolder>(NoteDiffCall
     }
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind(getItem(position), onDeleteClick)
     }
 
     class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val titleTextView: TextView = itemView.findViewById(R.id.textViewTitle)
         private val contentTextView: TextView = itemView.findViewById(R.id.textViewContent)
+        private val deleteButton: ImageButton = itemView.findViewById(R.id.buttonDelete)
 
-        fun bind(note: Note) {
+        fun bind(note: Note, onDeleteClick: (Note) -> Unit) {
             titleTextView.text = note.title
             contentTextView.text = note.content
+
+            deleteButton.setOnClickListener {
+                onDeleteClick(note)
+            }
         }
     }
 
