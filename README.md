@@ -12,17 +12,27 @@ Aplicación para crear notas con Android Nativo y Firebase
 https://github.com/SanguchoMela/notes_firebase_androidNativo.git
 ```
 
-2. Clona el proyecto en Android Studio en `File > New > Projecto from Version Control` y pega la URL
+2. Clona el proyecto en Android Studio en `File > New > Projecto from Version Control`, pega la URL y espera a que se construya el proyecto
 
 ```bash
 cd notes_firebase_androidNativo
 ```
 
-3. Espera a que se construya el proyecto y ejecútalo
+3. Configura [firebase](#firebase)
+
+4. Ejecuta el proyecto
 
 ## Construye la apk y aab
 
 1. En Android Studio, ve a `Build > Generate Signed App Bundle or APK`, completa las instrucciones y espera a que se generen los archivos`.apk` o `aab`, depende del que hayas elegido.
+
+## Firebase
+
+1. Crea un proyecto
+
+2. Añade una aplicación para Android
+
+3. Define el nombre del paquete de Android como `com.example.mynotes` y sigue las instrucciones de Firebase para vincular tu proyecto. 
 
 ## Capturas de funcionamiento
 
