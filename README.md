@@ -2,7 +2,7 @@
 
 Aplicación para crear notas con Android Nativo y Firebase
 
-**APK:** [APK's](https://github.com/SanguchoMela/notes_firebase_androidNativo/releases/tag/my_notes) 
+**APK:** [APK y AAB](https://github.com/SanguchoMela/notes_firebase_androidNativo/releases/tag/my_notes) 
 
 ## Ejecución en Android Studio
 
